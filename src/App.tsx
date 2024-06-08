@@ -34,6 +34,7 @@ const App = () => {
       return task;
     });
     setTasks(updatedTasks);
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
 
   const clearCompletedTasks = () => {
