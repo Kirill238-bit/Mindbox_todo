@@ -10,7 +10,7 @@ const TasksList:FC<IProps> = ({getFilteredTasks,toggleTaskCompleted}) => {
   return (
     <Wrapper>
         {getFilteredTasks().map((task) => (
-            <TaskCard key={task.id}>
+            <TaskCard key={task.id} completed={task.completed}>
                 <Checkbox checked={task.completed} onChange={() => toggleTaskCompleted(task.id)} />
                 <span>{task.text}</span>
             </TaskCard>

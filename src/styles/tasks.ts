@@ -8,13 +8,16 @@ export const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
 `
-export const TaskCard = styled.div`
+export const TaskCard = styled.div<{completed:boolean}>`
     width: 100%;
     height:40px;
     display: flex;
     gap:10px;
     align-items: center;
     border-bottom: 0.5px solid grey;
+    span{
+      text-decoration: ${props => props.completed ? 'line-through' : 'none'};
+    }
 `
 
 export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
